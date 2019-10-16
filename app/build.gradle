@@ -39,7 +39,7 @@ dependencies {
     // koin injection
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
-    implementation 'com.github.RafaelBarbosatec:AndroidMicroRepository:0.1.0'
+    implementation "com.github.RafaelBarbosatec:AndroidMicroRepository:$pokemon_repository_version"
 
     implementation (project(path: ':typepokemon')){
         exclude group: 'com.rafaelbarbosatec.repository'
