@@ -27,7 +27,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.1.0'
@@ -36,28 +36,12 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-
-    // GLIDE
-    implementation "com.github.bumptech.glide:glide:$glide_version"
-    kapt "com.github.bumptech.glide:compiler:$glide_version"
-
-    // Retrofit
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-
-    // Room
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    implementation "android.arch.persistence.room:rxjava2:$room_version"
-    kapt "android.arch.persistence.room:compiler:$room_version"
-
     // koin injection
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
-    implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
+    implementation 'com.github.RafaelBarbosatec:AndroidMicroRepository:0.1.0'
 
     implementation (project(path: ':typepokemon')){
-        transitive false
+        exclude group: 'com.rafaelbarbosatec.repository'
     }
 }
