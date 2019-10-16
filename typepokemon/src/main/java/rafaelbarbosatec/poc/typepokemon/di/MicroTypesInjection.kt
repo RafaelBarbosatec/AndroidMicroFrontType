@@ -7,9 +7,6 @@ import rafaelbarbosatec.poc.typepokemon.PokemonTypesViewModel
 object MicroTypesInjection {
 
     val module = module {
-        factory { CreateModules.pokemonRepository(get()) }
-
-        ///ViewModels
         viewModel { PokemonTypesViewModel(get()) }
     }
 
